@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form>
+        <input type="text" name="ip"/>
+        <input type="submit"/>
+    </form>
+        <span>{{ ip_info['ip'] }}</span>
+        <span>{{ ip_info['country_code'] }}</span><br>
+{% endblock %}
