@@ -15,8 +15,6 @@ def index():
 
 @app.route("/find")
 def find():
-    ip = request.args.get('ip')
-    if ip == None: return redirect("/",302)
     return render_template("find.html", image=api.find())
 
 

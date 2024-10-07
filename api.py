@@ -5,7 +5,7 @@ import json
 
 def find():
     
-    ds = requests.get("https://coffee.alexflipnote.dev/random.json").content
+    ds = requests.get("https://coffee.alexflipnote.dev/random.json",verify=False).content
     image = json.loads(ds)["file"]
     return image
     
@@ -13,4 +13,4 @@ def find():
 
 
 if __name__=="__main__":
-    print(find(input("ip address:")))
+    print(find())
